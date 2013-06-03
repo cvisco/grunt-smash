@@ -1,6 +1,6 @@
 {
   "name": "grunt-smash",
-  "description": "A grunt task for Mike Bostocks' Smash",
+  "description": "A grunt task for Mike Bostock's Smash",
   "version": "0.1.0",
   "homepage": "https://github.com/cvisco/grunt-smash",
   "author": {
