@@ -1,4 +1,4 @@
-# grunt-smash
+# grunt-smash [![Build Status](https://travis-ci.org/cvisco/grunt-smash.png)](https://travis-ci.org/cvisco/grunt-smash)
 
 > A grunt task for Mike Bostock's Smash utility.
 
