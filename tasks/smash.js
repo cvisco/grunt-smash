@@ -22,10 +22,14 @@ module.exports = function(grunt) {
     // target one at a time.
     var q = queue(1);
 
-    // Iterate over the files
+    // Iterate over the file targets
     this.files.forEach(function(f) {
 
+      // Smash returns a readable stream object. We'll queue it so that
+      // we can read the data as it comes in and write our output file
+      // to disk once complete.
       q.defer(function (callback) {
+
         var s = smash(f.src);
         var content = "";
 
@@ -38,10 +42,13 @@ module.exports = function(grunt) {
           grunt.log.writeln('File "' + f.dest + '" created.');
           callback();
         });
+
       });
 
     });
 
+    // Notify grunt that we're done only when everything in the queue
+    // has finished
     q.awaitAll(done);
 
   });
